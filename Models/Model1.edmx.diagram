@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2915ae1496224367afeb7325bff86b00" Name="Diagram1">
+        <EntityTypeShape EntityType="YanShenWangModel.Carousel" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.CommentCourse" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.CommentGoods" Width="1.5" PointX="6" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.CommentPost" Width="1.5" PointX="5.25" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.Course" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.Goods" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.News" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.Order" Width="1.5" PointX="3" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.OrderDetials" Width="1.5" PointX="5.25" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.Post" Width="1.5" PointX="3" PointY="20.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.ReplyCommentCourse" Width="1.5" PointX="8.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.ReplyCommentGoods" Width="1.5" PointX="11.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.ReplyCommentPost" Width="1.5" PointX="7.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.School" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.ShoppingCart" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.Strategy" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.UserInfo" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.Course_hf" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.Course_pl" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.Goods_hf" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.Goods_pl" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.Post_hf" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.Post_pl" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.PostShow" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YanShenWangModel.shopping_cart" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="YanShenWangModel.FK_CommentCourse_Course" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_CommentCourse_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_ReplyCommentCourse_CommentCourse" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_CommentGoods_Goods" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_CommentGoods_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_ReplyCommentGoods_CommentGoods" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_CommentPost_Post1" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_CommentPost_UserInfo1" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_ReplyCommentPost_CommentPost1" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_OrderDetials_Goods" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_ShoppingCart_Goods" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_Order_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_OrderDetials_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_Post_UserInfo1" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_ReplyCommentCourse_UserInfo1" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_ReplyCommentGoods_UserInfo" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_ReplyCommentPost_UserInfo1" ManuallyRouted="false" />
+        <AssociationConnector Association="YanShenWangModel.FK_ShoppingCart_UserInfo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

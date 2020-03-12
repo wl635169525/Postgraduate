@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="YanShenWangModelStoreContainer" CdmEntityContainer="YanShenWangEntities">
+    <EntitySetMapping Name="Carousel">
+      <EntityTypeMapping TypeName="YanShenWangModel.Carousel">
+        <MappingFragment StoreEntitySet="Carousel">
+          <ScalarProperty Name="CarouselID" ColumnName="CarouselID" />
+          <ScalarProperty Name="CarouselLuJing1" ColumnName="CarouselLuJing1" />
+          <ScalarProperty Name="CarouselLuJing2" ColumnName="CarouselLuJing2" />
+          <ScalarProperty Name="CarouselLuJing3" ColumnName="CarouselLuJing3" />
+          <ScalarProperty Name="C1" ColumnName="C1" />
+          <ScalarProperty Name="C2" ColumnName="C2" />
+          <ScalarProperty Name="C3" ColumnName="C3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentCourse">
+      <EntityTypeMapping TypeName="YanShenWangModel.CommentCourse">
+        <MappingFragment StoreEntitySet="CommentCourse">
+          <ScalarProperty Name="CCourseID" ColumnName="CCourseID" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CCtime" ColumnName="CCtime" />
+          <ScalarProperty Name="CCContent" ColumnName="CCContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentGoods">
+      <EntityTypeMapping TypeName="YanShenWangModel.CommentGoods">
+        <MappingFragment StoreEntitySet="CommentGoods">
+          <ScalarProperty Name="CGoodsID" ColumnName="CGoodsID" />
+          <ScalarProperty Name="GoodsID" ColumnName="GoodsID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CGTime" ColumnName="CGTime" />
+          <ScalarProperty Name="CGContent" ColumnName="CGContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentPost">
+      <EntityTypeMapping TypeName="YanShenWangModel.CommentPost">
+        <MappingFragment StoreEntitySet="CommentPost">
+          <ScalarProperty Name="CPostID" ColumnName="CPostID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+          <ScalarProperty Name="CPTime" ColumnName="CPTime" />
+          <ScalarProperty Name="CPContent" ColumnName="CPContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Course">
+      <EntityTypeMapping TypeName="YanShenWangModel.Course">
+        <MappingFragment StoreEntitySet="Course">
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="CourseSort" ColumnName="CourseSort" />
+          <ScalarProperty Name="CourseTime" ColumnName="CourseTime" />
+          <ScalarProperty Name="CourseTitle" ColumnName="CourseTitle" />
+          <ScalarProperty Name="CourseIntroduce" ColumnName="CourseIntroduce" />
+          <ScalarProperty Name="CourseVideo" ColumnName="CourseVideo" />
+          <ScalarProperty Name="CoursePhoto" ColumnName="CoursePhoto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Goods">
+      <EntityTypeMapping TypeName="YanShenWangModel.Goods">
+        <MappingFragment StoreEntitySet="Goods">
+          <ScalarProperty Name="GoodsID" ColumnName="GoodsID" />
+          <ScalarProperty Name="GoodsName" ColumnName="GoodsName" />
+          <ScalarProperty Name="GoodsPhoto" ColumnName="GoodsPhoto" />
+          <ScalarProperty Name="SubPrice" ColumnName="SubPrice" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="GoodsIntroduce" ColumnName="GoodsIntroduce" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="GoodsPhoto1" ColumnName="GoodsPhoto1" />
+          <ScalarProperty Name="GoodsPhoto2" ColumnName="GoodsPhoto2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="YanShenWangModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="NewsID" ColumnName="NewsID" />
+          <ScalarProperty Name="NewsName" ColumnName="NewsName" />
+          <ScalarProperty Name="NewsTime" ColumnName="NewsTime" />
+          <ScalarProperty Name="NewsContent" ColumnName="NewsContent" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="YanShenWangModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetials">
+      <EntityTypeMapping TypeName="YanShenWangModel.OrderDetials">
+        <MappingFragment StoreEntitySet="OrderDetials">
+          <ScalarProperty Name="ODetialsID" ColumnName="ODetialsID" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="GoodsID" ColumnName="GoodsID" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Post">
+      <EntityTypeMapping TypeName="YanShenWangModel.Post">
+        <MappingFragment StoreEntitySet="Post">
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PostName" ColumnName="PostName" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostContent" ColumnName="PostContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReplyCommentCourse">
+      <EntityTypeMapping TypeName="YanShenWangModel.ReplyCommentCourse">
+        <MappingFragment StoreEntitySet="ReplyCommentCourse">
+          <ScalarProperty Name="RCCourseID" ColumnName="RCCourseID" />
+          <ScalarProperty Name="CCourseID" ColumnName="CCourseID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="RCCContent" ColumnName="RCCContent" />
+          <ScalarProperty Name="RCCTime" ColumnName="RCCTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReplyCommentGoods">
+      <EntityTypeMapping TypeName="YanShenWangModel.ReplyCommentGoods">
+        <MappingFragment StoreEntitySet="ReplyCommentGoods">
+          <ScalarProperty Name="RCGoodsID" ColumnName="RCGoodsID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CGoodsID" ColumnName="CGoodsID" />
+          <ScalarProperty Name="RCGContent" ColumnName="RCGContent" />
+          <ScalarProperty Name="RCGTime" ColumnName="RCGTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReplyCommentPost">
+      <EntityTypeMapping TypeName="YanShenWangModel.ReplyCommentPost">
+        <MappingFragment StoreEntitySet="ReplyCommentPost">
+          <ScalarProperty Name="RCPostID" ColumnName="RCPostID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="CPostID" ColumnName="CPostID" />
+          <ScalarProperty Name="RCPostContent" ColumnName="RCPostContent" />
+          <ScalarProperty Name="RCPostTime" ColumnName="RCPostTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="School">
+      <EntityTypeMapping TypeName="YanShenWangModel.School">
+        <MappingFragment StoreEntitySet="School">
+          <ScalarProperty Name="SchoolID" ColumnName="SchoolID" />
+          <ScalarProperty Name="SchoolName" ColumnName="SchoolName" />
+          <ScalarProperty Name="SchoolPhoto" ColumnName="SchoolPhoto" />
+          <ScalarProperty Name="SIntroduce" ColumnName="SIntroduce" />
+          <ScalarProperty Name="KYmessage" ColumnName="KYmessage" />
+          <ScalarProperty Name="ZYmessage" ColumnName="ZYmessage" />
+          <ScalarProperty Name="ZMTeacher" ColumnName="ZMTeacher" />
+          <ScalarProperty Name="PaiMing" ColumnName="PaiMing" />
+          <ScalarProperty Name="QuNianZhaoShengRenShu" ColumnName="QuNianZhaoShengRenShu" />
+          <ScalarProperty Name="YouShiZhuanYe" ColumnName="YouShiZhuanYe" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShoppingCart">
+      <EntityTypeMapping TypeName="YanShenWangModel.ShoppingCart">
+        <MappingFragment StoreEntitySet="ShoppingCart">
+          <ScalarProperty Name="ShoppingCartID" ColumnName="ShoppingCartID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="GoodsID" ColumnName="GoodsID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="flag" ColumnName="flag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Strategy">
+      <EntityTypeMapping TypeName="YanShenWangModel.Strategy">
+        <MappingFragment StoreEntitySet="Strategy">
+          <ScalarProperty Name="StrategyID" ColumnName="StrategyID" />
+          <ScalarProperty Name="StrategyName" ColumnName="StrategyName" />
+          <ScalarProperty Name="StrategyTime" ColumnName="StrategyTime" />
+          <ScalarProperty Name="StrategyContent" ColumnName="StrategyContent" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserInfo">
+      <EntityTypeMapping TypeName="YanShenWangModel.UserInfo">
+        <MappingFragment StoreEntitySet="UserInfo">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PassWord" ColumnName="PassWord" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="Birth" ColumnName="Birth" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Course_hf">
+      <EntityTypeMapping TypeName="YanShenWangModel.Course_hf">
+        <MappingFragment StoreEntitySet="Course_hf">
+          <ScalarProperty Name="CCourseID" ColumnName="CCourseID" />
+          <ScalarProperty Name="RCCourseID" ColumnName="RCCourseID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="RTime" ColumnName="RTime" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Course_pl">
+      <EntityTypeMapping TypeName="YanShenWangModel.Course_pl">
+        <MappingFragment StoreEntitySet="Course_pl">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CTime" ColumnName="CTime" />
+          <ScalarProperty Name="CourseID" ColumnName="CourseID" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Goods_hf">
+      <EntityTypeMapping TypeName="YanShenWangModel.Goods_hf">
+        <MappingFragment StoreEntitySet="Goods_hf">
+          <ScalarProperty Name="CGoodsID" ColumnName="CGoodsID" />
+          <ScalarProperty Name="RCGoodsID" ColumnName="RCGoodsID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="RTime" ColumnName="RTime" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Goods_pl">
+      <EntityTypeMapping TypeName="YanShenWangModel.Goods_pl">
+        <MappingFragment StoreEntitySet="Goods_pl">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CTime" ColumnName="CTime" />
+          <ScalarProperty Name="GoodsID" ColumnName="GoodsID" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Post_hf">
+      <EntityTypeMapping TypeName="YanShenWangModel.Post_hf">
+        <MappingFragment StoreEntitySet="Post_hf">
+          <ScalarProperty Name="CPostID" ColumnName="CPostID" />
+          <ScalarProperty Name="RCPostID" ColumnName="RCPostID" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="RTime" ColumnName="RTime" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Post_pl">
+      <EntityTypeMapping TypeName="YanShenWangModel.Post_pl">
+        <MappingFragment StoreEntitySet="Post_pl">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Content" ColumnName="Content" />
+          <ScalarProperty Name="CTime" ColumnName="CTime" />
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PostShow">
+      <EntityTypeMapping TypeName="YanShenWangModel.PostShow">
+        <MappingFragment StoreEntitySet="PostShow">
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PostID" ColumnName="PostID" />
+          <ScalarProperty Name="PostName" ColumnName="PostName" />
+          <ScalarProperty Name="PostTime" ColumnName="PostTime" />
+          <ScalarProperty Name="PostContent" ColumnName="PostContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="shopping_cart">
+      <EntityTypeMapping TypeName="YanShenWangModel.shopping_cart">
+        <MappingFragment StoreEntitySet="shopping_cart">
+          <ScalarProperty Name="GoodsID" ColumnName="GoodsID" />
+          <ScalarProperty Name="ShoppingCartID" ColumnName="ShoppingCartID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="GoodsPhoto" ColumnName="GoodsPhoto" />
+          <ScalarProperty Name="GoodsName" ColumnName="GoodsName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
