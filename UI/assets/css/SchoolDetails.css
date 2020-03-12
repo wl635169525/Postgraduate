@@ -1,0 +1,80 @@
+﻿body {
+    margin:0px;
+}
+.schoolname{
+   padding-top: 0px;
+   background: #3d84e6;
+   background-size: auto auto;
+   background: #3d84e6;
+   background-size: cover;
+   text-align: center;
+   padding: 10px 0;
+   height: 110px;
+}
+.name{
+    height:60px;    
+    color:white;
+    text-align: center;
+    margin-top:30px;
+    font-size:36px;
+}
+.jianjie-news{    
+    width:1170px;
+    /*background-color:aqua;*/
+    margin:auto;
+}
+.jianjie{
+    height:400px;
+    width:800px;
+    float:left;
+   
+}
+.image1{
+    width:500px;
+    height:400px;
+    float:right;
+  
+}
+.kongge1{
+    height:30px;
+    width:100%;
+}
+.introduce{
+    float:left;
+    width:500px;
+    height:400px;
+   
+}
+.jianjie{
+    float:left;
+    width:600px;
+    height:400px;
+}
+.title1{
+    font-size:22px;
+    color:dimgray;
+    font-family:Arial;
+    line-height:30px;
+    width:600px;
+    
+}
+.content1{
+    font-size:15px;
+    color:black;
+    font-family:Arial;
+    line-height:20px
+}
+/*专业信息*/
+.zhuanyexinxi{
+    width:1170px;
+    margin:auto;
+    /*height:00px;*/
+}
+.kongge2{
+    width:1170px;
+    height:30px;
+}
+.kongge3{
+    width:1170px;
+    height:80px;
+}

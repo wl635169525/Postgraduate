@@ -1,0 +1,30 @@
+﻿     .container1{width: 1200px; margin: 0 auto;}
+
+       .wrap{padding: 20px;overflow: hidden;}
+
+       .box1{float: left;width: 750px;height: 1400px;background-color:#ffffff;box-shadow: 0 0 4px #cecccc;
+         -webkit-box-shadow: 0 0 4px #cecccc;}
+        /* 固定布局写法 */
+       .box2{float: right;width: 400px;box-shadow: 0 0 4px #cecccc;
+  -webkit-box-shadow: 0 0 4px #cecccc;height: 700px;background-color:#ffffff;}
+        /*清除浮动造成的影响*/
+       .T{padding: :20px;overflow: hidden;width:750px;height: 50px;}
+       .blank{height: 20px;width: 750px;clear: both;  }
+       .sec1{float: left;width:150px;height: 100%;}
+
+       .sec2{float: right;width: 590px;height: 100%;}
+       
+       .clearfix:after{content: '';display: table;clear: both;}
+
+       .clearfix{*zoom:1;}
+       p{font-family:KaiTi;font-size:18px;color:#000000;}
+       .tab1{width:750px; }
+    
+       .r1{
+           -moz-border-radius:50%;
+           -webkit-border-radius:50%;
+           border-radius:50%;
+           width:250px;
+           height:150px;
+           float:left;
+       }

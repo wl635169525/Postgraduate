@@ -1,0 +1,147 @@
+﻿@model UI.Models.CoursesViewModels
+@{
+    ViewBag.Title = "Course";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<header id="head" class="secondary">
+    <div class="container">
+        <h1>在线学习</h1>
+        <p>少一些功利主义的追求，多一些不为什么的坚持</p>
+    </div>
+</header>
+<!-- container -->
+
+<section class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <section id="portfolio" class="page-section section appear clearfix">
+                <br />
+                <br />
+                <p style="text-align:center;font-size:18px">
+                    时间，每天得到的都是24小时，可是一天的时间给勤勉的人带来智慧与力量，给懒散的人只能留下一片悔恨。 
+                    <P1 style="text-align:right;font-size:15px;width:1140px">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; --鲁 迅
+                    </P1>
+                    <br />
+                    <br />                                    
+                </p>
+                <div class="row">
+                    <nav id="filter" class="col-md-12 text-center">
+                        <ul>
+                            <li><a href="#Politic" class="btn-theme btn-small" data-toggle="tab" data-filter="*">政治</a></li>
+                            <li><a href="#Math" class="btn-theme btn-small" data-toggle="tab" data-filter=".webdesign">高数</a></li>
+                            <li><a href="#English" class="btn-theme btn-small" data-toggle="tab" data-filter=".photography">英语</a></li>
+                            <li><a href="#Other" class="btn-theme btn-small" data-toggle="tab" data-filter=".print">其他</a></li>
+                        </ul>
+                    </nav>
+                    <div class="col-md-12">
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane fade in active" id="Politic">
+                                <div class="row">
+                                    <div class="portfolio-items isotopeWrapper clearfix" id="3">
+                                        @foreach(var course in Model.CoursePolitic)
+                                        { 
+                                        <article class="col-sm-4 isotopeItem webdesign">
+                                            <div class="portfolio-item">
+                                                <img src="~/@course.CoursePhoto" alt="" height="255"/>
+                                                <div class="portfolio-desc align-center">
+                                                    <div class="folio-info">
+                                                        <a href="~/assets/images/portfolio/img1.jpg" class="fancybox">
+                                                            <h5>@course.CourseTitle</h5>
+                                                            <h4 ><a href="@Url.Action("Coursedetails1", "Coursedetails", new {courseid = course.CourseID} )" style="color:lightcoral">进入学习</a></h4>
+                                                            <i class="fa fa-link fa-2x"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                         }                                     
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="Math">
+                                <div class="row">
+                                    <div class="portfolio-items isotopeWrapper clearfix" id="3">
+                                        @foreach(var course in Model.CourseMath)
+                                        {
+                                        <article class="col-sm-4 isotopeItem webdesign">
+                                            <div class="portfolio-item">
+                                                <img src="~/@course.CoursePhoto" alt=""  height="255"/>
+                                                <div class="portfolio-desc align-center">
+                                                    <div class="folio-info">
+                                                        <a href="~/assets/images/portfolio/img1.jpg" class="fancybox">
+                                                            <h5>@course.CourseTitle</h5>
+                                                            <h4><a href="@Url.Action("Coursedetails1","Coursedetails", new {courseid = course.CourseID})" style="color:lightcoral">进入学习</a></h4>
+                                                            <i class="fa fa-link fa-2x"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        }                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="English">
+                                <div class="row">
+                                    <div class="portfolio-items isotopeWrapper clearfix" id="3">
+                                        @foreach(var course in Model.CourseEnglish)
+                                        { 
+                                        <article class="col-sm-4 isotopeItem webdesign">
+                                            <div class="portfolio-item">
+                                                <img src="~/@course.CoursePhoto" alt=""  height="255"/>
+                                                <div class="portfolio-desc align-center">
+                                                    <div class="folio-info">
+                                                        <a href="~/assets/images/portfolio/img1.jpg" class="fancybox">
+                                                            <h5>@course.CourseTitle</h5>
+                                                            <h4><a href="@Url.Action("Coursedetails1","Coursedetails", new {courseid = course.CourseID})" style="color:lightcoral">进入学习</a></h4>
+                                                            <i class="fa fa-link fa-2x"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        }
+                                      
+                                                                            
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="Other">
+                                <div class="row">
+                                    <div class="portfolio-items isotopeWrapper clearfix" id="3">
+                                        @foreach(var course in Model.CourseOther)
+                                        { 
+                                        <article class="col-sm-4 isotopeItem webdesign">
+                                            <div class="portfolio-item">
+                                                <img src="~/@course.CoursePhoto" alt=""  height="255"/>
+                                                <div class="portfolio-desc align-center">
+                                                    <div class="folio-info">
+                                                        <a href="~/assets/images/portfolio/img1.jpg" class="fancybox">
+                                                            <h5>@course.CourseTitle</h5>
+                                                            <h4><a href="@Url.Action("Coursedetails1","Coursedetails", new {courseid = course.CourseID})" style="color:lightcoral">进入学习</a></h4>
+                                                            <i class="fa fa-link fa-2x"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </article>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+
+</section>
+<!-- /container -->
+<script type='text/javascript' src='~/assets/js/jquery.min.js'></script>
+<script src="~/assets/js/bootstrap.min.js"></script>
+

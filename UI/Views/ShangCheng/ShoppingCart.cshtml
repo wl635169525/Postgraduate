@@ -1,0 +1,98 @@
+﻿@model UI.Models.ShoppingCartViewModels
+@{
+    ViewBag.Title = "ShoppingCart";
+    Layout = "~/Views/Shared/_ShangCheng.cshtml";
+}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><a href="@Url.Action("ShangChengIndex","ShangCheng")"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>资料市场</a></li>
+            <li class="active">购物车</li>
+        </ol>
+    </div>
+</div>
+<!-- //资料市场导航 -->
+<!-- 购物车列表 -->
+<div class="checkout">
+    <div class="container">
+        <h3 class="animated wow slideInLeft" data-wow-delay=".5s">我的购物车: </h3>
+        <div class="checkout-right animated wow slideInUp" data-wow-delay=".5s">
+            <table class="timetable_sub">
+                <thead>
+                    <tr>
+                        <th>购物车号</th>
+                        <th>商品</th>
+                        <th>数量</th>
+                        <th>商品名称</th> 
+                        <th>商品单价</th>                          
+                        <th>商品总价</th>
+                        <th>移除</th>
+                    </tr>
+                </thead>
+                @foreach (var shoppingcart in Model.shopping_cart)
+                {
+                    <tr class="rem1">
+                        <td class="invert">@shoppingcart.ShoppingCartID</td>
+                        <td class="invert-image"><a href="#"><img src="/@shoppingcart.GoodsPhoto" alt="" class="img-responsive" /></a></td>
+                        <td class="invert">
+                            <div class="quantity">
+                                <div class="quantity-select">
+                                    <div class="entry value-minus">&nbsp;</div>
+                                    <div class="entry value"><span>@shoppingcart.Number</span></div>
+                                    <div class="entry value-plus active">&nbsp;</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="invert">@shoppingcart.GoodsName</td>
+                        <td class="invert">$@shoppingcart.Price</td>
+                        <td class="invert">$@shoppingcart.Total</td>
+                        <td class="invert">
+                            <div class="rem">
+                                <div class="close1"> </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                }
+                              
+      
+            </table>
+        </div>
+        <!--购物车列表介绍-->
+        <!--商品清单列表-->
+        <div class="checkout-left">
+            <div class="checkout-left-basket animated wow slideInLeft" data-wow-delay=".5s">
+                <h4>商品清单</h4>
+                <ul>
+                    <li>商品1 <i>-</i> <span>$250.00 </span></li>
+                    <li>商品2 <i>-</i> <span>$290.00 </span></li>
+                    <li>商品3 <i>-</i> <span>$299.00 </span></li>
+                    <li>运费 <i>-</i> <span>$15.00</span></li>
+                    <li>总价 <i>-</i> <span>$854.00</span></li>
+                </ul>
+            </div>
+            <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
+                <a href="@Url.Action("ShangChengIndex","ShangCheng")"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>继续购物</a>
+            </div>
+            <div class="checkout-right-basket animated wow slideInRight" data-wow-delay=".5s">
+                <a href="#"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>立即购买</a>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+</div>
+
+          <!--数量增加的函数-->
+<script>
+									$('.value-plus').on('click', function(){
+										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)+1;
+										divUpd.text(newVal);
+									});
+
+									$('.value-minus').on('click', function(){
+										var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10)-1;
+										if(newVal>=1) divUpd.text(newVal);
+									});
+</script>
+<!--数量增加的函数-->

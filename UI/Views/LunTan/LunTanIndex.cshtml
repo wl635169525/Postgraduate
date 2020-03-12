@@ -1,0 +1,93 @@
+﻿@model UI.Models.LunTanViewModels
+@{
+    ViewBag.Title = "LunTanIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/assets/css/LunTan.css" rel="stylesheet" />
+<link rel='stylesheet' id='camera-css' href='/assets/css/camera.css' type='text/css' media='all'> 
+<!--轮播图-->
+<header id="head">
+    <div class="container">
+        <div class="heading-text">
+            <h1 class="animated flipInY delay1">Start Online Education</h1>
+            <p>Free Online education template for elearning and online education institute.</p>
+        </div>
+
+        <div class="fluid_container">
+            <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
+                <div data-thumb="/assets/images/slides/thumbs/img1.jpg" data-src="/assets/images/slides/img1.jpg">
+                    <h2>We develop.</h2>
+                </div>
+                <div data-thumb="/assets/images/slides/thumbs/img2.jpg" data-src="/assets/images/slides/img2.jpg">
+                </div>
+                <div data-thumb="/assets/images/slides/thumbs/img3.jpg" data-src="/assets/images/slides/img3.jpg">
+                </div>
+            </div><!-- #camera_wrap_3 -->
+        </div>
+    </div>
+</header>
+<div class="kongge"></div>
+<div class="post-page">   
+@foreach (var post in Model.post1)
+{
+    <div class="post-contain">
+        <div class="touxiangshang"></div>
+        <div class="user-photo">
+            <img src="@post.Photo" width="130" height="130" />
+        </div>
+        <div class="post-content">
+            <div class="ziti">
+                <img src="~/images/zuozhe.png" height="18" width="18" />
+                &nbsp;&nbsp;作者：
+                <span class="yanse">@post.Name</span>
+            </div>
+            <div class="ziti">
+                <img src="~/assets/images/tubiao/shijian.png" height="18" width="18" />
+                &nbsp;&nbsp;时间：
+                <span class="yanse">@post.PostTime</span>
+            </div>
+            <div class="ziti">
+                <img src="~/images/content.png" height="18" width="18" />
+                &nbsp;&nbsp;帖子标题：
+                <span class="yanse">
+                    <a style="color:#000000;" href="@Url.Action("PostDetail","LunTan",new { postid=post.PostID})"> @post.PostName</a>
+                </span>
+            </div>
+        </div>
+    </div>
+}
+    
+    <div style="text-align:center;font-family:FangSong;font-size:23px;">
+        <br /><br /><br />       
+        <a href="@Url.Action("Post","LunTan")">发布帖子</a>
+    </div>
+
+</div>
+   
+<script type='text/javascript' src='/assets/js/jquery.min.js'></script>
+<script type='text/javascript' src='/assets/js/fancybox/jquery.fancybox.pack.js'></script>
+<script type='text/javascript' src='/assets/js/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='/assets/js/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='/assets/js/camera.min.js'></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/custom.js"></script>
+<script>
+		jQuery(function(){
+
+			jQuery('#camera_wrap_4').camera({
+                transPeriod: 500,
+                time: 3000,
+				height: '600',
+				loader: 'false',
+				pagination: true,
+				thumbnails: false,
+				hover: false,
+                playPause: false,
+                navigation: false,
+				opacityOnGrid: false,
+				imagePath: 'assets/images/'
+			});
+
+		});
+
+</script>

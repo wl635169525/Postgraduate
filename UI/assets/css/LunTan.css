@@ -1,0 +1,45 @@
+﻿body {
+    margin:0px;
+}
+.post-page{
+    width:750px;
+    margin:auto;
+    height:1000px;
+    background-color:gainsboro;
+}
+.kongge{
+    height:60px;
+}
+.post-contain{
+    width:750px;
+    height:180px;
+    float:left;
+    background-color:white;
+}
+.user-photo{
+    border-radius: 50%;
+    border: 2px solid #ff0000;
+    overflow: hidden;
+    height:130px;
+    width:130px;
+    /*margin-top:15px;*/
+    margin-left:25px;
+    float:left;
+}
+.touxiangshang{
+    height:25px;
+}
+.post-content{
+    height:130px;
+    width:525px;
+    float:right;
+    margin-right:25px;      
+}
+.ziti{
+    height:25px;
+    font-size:15px;
+}
+.yanse{
+    color:red;
+}
+

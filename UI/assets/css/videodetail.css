@@ -1,0 +1,91 @@
+﻿body {
+    margin:0px;
+}
+.videobox{
+    width:100%;
+    height:600px;
+    background-color:dimgray;
+}
+.k{
+    height:10px;
+}
+.title{
+    width:1100px;
+    height:50px;
+    text-align:center;
+    margin:auto;
+    color:white;
+    font-size:25px;
+
+}
+.player{
+    width:1100px;
+    height:520px;
+    margin:auto;
+}
+.introduce{
+    width:1100px;
+    /*height:160px;*/
+    margin:auto;
+    text-align:left;
+    
+}
+.xiaotimu{
+    font-size: 20px;
+    color: #888888;
+    margin-top:20px;
+    text-align:left;
+}
+.jieshaoziti{
+    font-size:16px;
+    color: #888888
+}
+.haha{
+    color:#808080;
+    font-size:15px;
+}
+.tuijian{
+    width:1100px;
+    height:260px;
+    margin:auto;
+   
+}
+
+.comment{
+    width:1100px;
+    height:50px;
+    margin:auto;
+    
+}
+.subvedio{
+    height:200px;
+    width:275px;
+    float:left;
+}
+.vedio1{
+    height:200px;
+    width:250px;
+    margin:auto;
+    text-align:left;
+}
+.vedio2{
+    height:180px;
+    width:250px;
+    text-align:left;
+}
+.hahei{
+    height:2px;
+    width:1100px;
+    background-color:red;
+    
+    margin:auto;
+}
+.aaa{
+    font-size: 20px;
+    color: #888888;
+    margin-top:50px;
+    text-align:left;
+}
+.c1{
+    background-color:white;
+}

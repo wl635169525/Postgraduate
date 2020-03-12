@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Post";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/ueditor/ueditor.config.js"></script>
+<script src="~/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript">
+    var editorOption = {
+        initialFrameWidth: 1100,
+        autoHeightEnabled: true,
+        maximumWords: 1000,
+        initialFrameHeight: 150,
+        toolbars: [['source', 'undo', 'redo', 'bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'date', 'time', 'link', 'unlink', 'fontfamily', 'fontsize', 'forecolor', 'simpleupload', 'emotion', 'scrawl', 'insertvideo', 'music', 'attachment', 'map', 'inserttable', 'help', 'justifyleft', 'justifyright', 'justifycenter', 'justifyjustify']]
+    };
+    var editor = new baidu.editor.ui.Editor(editorOption);
+    editor.render('PostContent');
+
+
+
+</script>
+
+<header id="head" class="secondary">
+    <div class="container">
+        <h1>发布帖子</h1>
+        <p>分享你的所见所得</p>
+    </div>
+</header>
+
+<div style="width:100px;margin-left:230px;">
+    @using (Html.BeginForm("Post", "LunTan", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div style="height:100px;"></div>
+        <div style="height:80px;width:700px;">
+            <div style="float:left ;margin-left:280px;">
+            <p style="text-align:right;font-family:KaiTi;font-size:24px;" >帖子标题：</p>
+            </div>
+           <div style="float:right">
+               <textarea id="PostTitle" style="height:30px;width:300px;" name="PostTitle" required></textarea>
+           </div>
+           
+        </div>
+        <div>
+            <textarea id="PostContent" name="PostContent" required></textarea>
+        </div>
+            <div>
+                @if (Session["UserID"] != null)
+                {
+                    <input type="submit" value="发 表 帖子" />
+                }
+                else
+                {
+                    <input type="button" value="发 表 帖子" onclick="alert(' 请先登录 ')" />
+                }
+            </div>
+    }
+</div>

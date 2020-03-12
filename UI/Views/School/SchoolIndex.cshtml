@@ -1,0 +1,259 @@
+﻿@model UI.Models.SchoolViewModels
+@{
+    ViewBag.Title = "SchoolIndex";
+    Layout = "~/Views/Shared/_School.cshtml";
+}
+<link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+<div class="main">
+    <div class="main-inner body-width">
+        <div class="banner clearfix">
+            <div class="slider" id="slider">
+                <ul class="slider-wrapper">
+                    <li class="item" data-title="考研，选好学校你就成功了一半！">
+                        <a href="#" class="pic"><img src="~/images/Beida.jpg" alt="#"></a>
+                    </li>
+                    <li class="item" data-title="学弟学妹，夏大学姐等你来哦" data-author="by 厦大的学姐">
+                        <a href="#" class="pic"><img src="~/images/xiada2.jpg" alt="#"></a>
+                    </li>
+                    <li class="item" data-title="别想了，我们要的就是你" data-author="by 武大君">
+                        <a href="#" class="pic"><img src="/images/wuda.jpg" alt="#"></a>
+                    </li>
+                    <li class="item" data-title="学校什么的还不是随便挑" data-author="by 陈独秀同志">
+                        <a href="#" class="pic"><img src="~/images/xiada1.jpg" alt="#"></a>
+                    </li>
+                    <li class="item" data-title="众所周知的顶级学府——董里">
+                        <a href="#" class="pic"><img src="~/images/Beida1.jpg" alt="#"></a>
+                    </li>
+                </ul>
+                <a href="javascript:;" class="slider-prev"></a>
+                <a href="javascript:;" class="slider-next"></a>
+                <div class="slider-title">
+                    <h2></h2>
+                    <span></span>
+                </div>
+                <div class="slider-btns">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+            </div>
+            <div class="banner-info">
+                <div class="news body-border">
+                    <ul>
+                        <li class="title">热门信息</li>
+                        <li class="link">
+                            <a href="#">上海交通大学夏令营</a>
+                            <span></span>
+                            <a href="#">湖南大学夏令营</a>
+                            <span></span>
+                            <a href="#">北京大学免推生</a>
+                            <span></span>
+                            <a href="#">好考的顶级学府</a>
+                            <span></span>
+                            <a href="#">冷门但实力的学校</a>
+                            <span></span>
+                            <a href="#">暨大考研历年信息</a>
+                            <span></span>
+                            <a href="#">厦大热门学科</a>
+                            <span></span>
+                        </li>
+                        <li class="choose">
+                            <a href="#">『各大高校考研历年信息』 大合集</a>
+                            <span class="icon-text__pink">精选</span>
+                        </li>
+                        <li class="assistant">
+                            <p>资料小助手:  <a href="#">雁升网小组</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="app body-border"><a href="#"></a></div>
+            </div>
+        </div>
+        <div class="main-cont main-album">
+            <div class="main-cont__title">
+                <h3>学校推荐</h3>
+            </div>
+            <ul class="main-cont__list clearfix">
+                @foreach (var yuanxiao1 in Model.School1)
+                {
+                    <li class="item">
+                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao1.SchoolID})" class="pic"><img src="~/@yuanxiao1.SchoolPhoto" alt="#"></a>
+                        <div class="info">
+                            <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao1.SchoolID})" class="title">@yuanxiao1.SchoolName</a>
+                            <p>全国排名:@yuanxiao1.PaiMing · 去年招生人数:@yuanxiao1.QuNianZhaoShengRenShu</p>
+                            <p>来自<a href="#" class="author">雁升网</a></p>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="main-cont main-recommend">
+            <div class="main-cont__title">
+                <h3><a href="#suiji" data-toggle="tab">热门大学</a></h3>
+                <p class="list">
+                    <em>类别：</em>
+                    <a href="#CM" data-toggle="tab">传媒类</a>
+                    <span>|</span>
+                    <a href="#YX" data-toggle="tab">医学类</a>
+                    <span>|</span>
+                    <a href="#SF" data-toggle="tab">师范类</a>
+                    <span>|</span>
+                    <a href="#LG" data-toggle="tab">理工类</a>                    
+                    <span>|</span>
+                    <a href="#JR" data-toggle="tab">金融类</a>
+                </p>
+            </div> 
+            <div>
+                <div id="myTabContent" class="tab-content">
+                    <div class="tab-pane fade in active" id="suiji">
+                        <ul class="main-cont__list clearfix">
+                            @foreach (var yuanxiao2 in Model.School2)
+                        {
+                                <li class="item">
+                                    <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao2.SchoolID})" class="pic"><img src="/@yuanxiao2.SchoolPhoto" width="222" height="200" alt="#"></a>
+                                    <div class="info">
+                                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao2.SchoolID})" class="title">@yuanxiao2.SchoolName</a>
+                                        <span>全国排名：@yuanxiao2.PaiMing</span>
+                                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao2.SchoolID})" class="icon-text__pink purchase">详情</a>
+                                    </div>
+                                </li>
+
+                        }
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="CM">
+                        <ul class="main-cont__list clearfix">
+                            @foreach (var yuanxiao5 in Model.ChuanMei)
+                        {
+                                <li class="item">
+                                    <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao5.SchoolID})" class="pic"><img src="/@yuanxiao5.SchoolPhoto" width="222" height="200" alt="#"></a>
+                                    <div class="info">
+                                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao5.SchoolID})" class="title">@yuanxiao5.SchoolName</a>
+                                        <span>全国排名：@yuanxiao5.PaiMing</span>
+                                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao5.SchoolID})" class="icon-text__pink purchase">详情</a>
+                                    </div>
+                                </li>
+
+                        }
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="YX">
+                        <ul class="main-cont__list clearfix">
+                            @foreach (var yuanxiao6 in Model.YiXue)
+                        {
+                                <li class="item">
+                                    <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao6.SchoolID})" class="pic"><img src="/@yuanxiao6.SchoolPhoto" width="222" height="200" alt="#"></a>
+                                    <div class="info">
+                                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao6.SchoolID})" class="title">@yuanxiao6.SchoolName</a>
+                                        <span>全国排名：@yuanxiao6.PaiMing</span>
+                                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao6.SchoolID})" class="icon-text__pink purchase">详情</a>
+                                    </div>
+                                </li>
+
+                        }
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="SF">
+                        <ul class="main-cont__list clearfix">
+                            @foreach (var yuanxiao7 in Model.ShiFan)
+                        {
+                                <li class="item">
+                                    <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao7.SchoolID})" class="pic"><img src="/@yuanxiao7.SchoolPhoto" width="222" height="200" alt="#"></a>
+                                    <div class="info">
+                                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao7.SchoolID})" class="title">@yuanxiao7.SchoolName</a>
+                                        <span>全国排名：@yuanxiao7.PaiMing</span>
+                                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao7.SchoolID})" class="icon-text__pink purchase">详情</a>
+                                    </div>
+                                </li>
+
+                        }
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="LG">
+                        <ul class="main-cont__list clearfix">
+                            @foreach (var yuanxiao8 in Model.LiGong)
+                        {
+                                <li class="item">
+                                    <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao8.SchoolID})" class="pic"><img src="/@yuanxiao8.SchoolPhoto" width="222" height="200" alt="#"></a>
+                                    <div class="info">
+                                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao8.SchoolID})" class="title">@yuanxiao8.SchoolName</a>
+                                        <span>全国排名：@yuanxiao8.PaiMing</span>
+                                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao8.SchoolID})" class="icon-text__pink purchase">详情</a>
+                                    </div>
+                                </li>
+
+                        }
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="JR">
+                        <ul class="main-cont__list clearfix">
+                            @foreach (var yuanxiao9 in Model.JinRong)
+                        {
+                                <li class="item">
+                                    <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao9.SchoolID})" class="pic"><img src="/@yuanxiao9.SchoolPhoto" width="222" height="200" alt="#"></a>
+                                    <div class="info">
+                                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao9.SchoolID})" class="title">@yuanxiao9.SchoolName</a>
+                                        <span>全国排名：@yuanxiao9.PaiMing</span>
+                                        <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao9.SchoolID})" class="icon-text__pink purchase">详情</a>
+                                    </div>
+                                </li>
+
+                        }
+                        </ul>
+                    </div>
+                </div>
+            </div>   
+                <div class="main-cont main-user">
+                    <div class="main-cont__title">
+                        <h3>一流大学</h3>
+                        @*<a href="#" class="more">更多牛人 ></a>*@
+                    </div>
+                    <ul class="main-cont__list clearfix">
+                        @foreach (var yuanxiao3 in Model.School3)
+                {
+                            <li class="item">
+                                <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao3.SchoolID})" class="pic" style=" background url(/images/cont/user_img1.jpg) no-repeat; background-size: cover; "></a>
+                                <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao3.SchoolID})" class="headImg"><img src="/@yuanxiao3.SchoolPhoto" alt="#"></a>
+                                <div class="info">
+                                    <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao3.SchoolID})" class="info-title">@yuanxiao3.SchoolName</a>
+                                    <p><i class="icon-star"></i>全国排名：@yuanxiao3.PaiMing</p>
+                                    <p>优势专业: <b>@yuanxiao3.YouShiZhuanYe</b></p>
+                                </div>
+                            </li>
+                }
+                    </ul>
+                </div>
+                <div class="main-cont main-waterfall">
+                    <div class="main-cont__title">
+                        <h3>大家正在看</h3>
+                    </div>
+                    <ul class="main-cont__list clearfix">
+                        @foreach (var yuanxiao4 in Model.School4)
+                {
+                            <li class="item item-cur">
+                                <a href="@Url.Action("SchoolDetails","School", new {schoolid = yuanxiao4.SchoolID})" class="pic">
+                                    <img src="~/@yuanxiao4.SchoolPhoto" alt="#" />
+                                </a>
+                                <div class="waterfall-info">
+                                    <p class="title">@yuanxiao4.SchoolName</p>
+                                    <p class="icon"><span class="icon-star">89</span><span class="icon-like">10</span></p>
+                                </div>
+                                <div class="collect-info">
+                                    @*<a href="#" class="headImg"><img src="/images/cont/waterfall_headImg1.jpeg" alt="#"></a>*@
+                                    <p class="title"><a href="#">全国排名：@yuanxiao4.PaiMing</a></p>
+                                    <p class="to">收集到<a href="#">雁升网</a></p>
+                                </div>
+                            </li>
+                }
+                    </ul>
+                </div>
+            </div>
+    </div>   
+</div>
+ <script type='text/javascript' src='~/assets/js/jquery.min.js'></script>
+<script src="~/assets/js/bootstrap.min.js"></script>
+
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="~/assets/js/script.js"></script>

@@ -1,0 +1,210 @@
+﻿@model UI.Models.ShangChengViewModels
+@{
+    ViewBag.Title = "ShangChengDetails";
+    Layout = "~/Views/Shared/_ShangCheng.cshtml";
+}
+
+<!-- 商品详情页导航 -->
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+            <li><a href="@Url.Action("ShangChengIndex", "ShangCheng")"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>资料市场</a></li>
+            <li class="active">商品详情</li>
+        </ol>
+    </div>
+</div>
+<!-- //商品详情页导航介绍 -->
+<!-- 商品详情 -->
+<div class="single">
+    <div class="container">
+        <div class="col-md-4 products-left">
+            <div class="filter-price animated wow slideInUp" data-wow-delay=".5s">
+                <h3>买你所需要的东西</h3>
+                <ul class="dropdown-menu1">
+                    <li>
+                        <a href="">
+                            <div id="slider-range"></div>
+                            <input type="text" id="amount" style="border: 0" />
+                        </a>
+                    </li>
+                </ul>
+                <script type='text/javascript'>
+//<![CDATA[
+						$(window).load(function(){
+						 $( "#slider-range" ).slider({
+								range: true,
+								min: 0,
+								max: 100000,
+								values: [ 10000, 60000 ],
+								slide: function( event, ui ) {  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+								}
+					 });
+					$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+
+
+						});//]]>
+                </script>             
+                <script src="~/assets/js/Sc/jquery.min.js"></script>
+                <!---->
+            </div>
+            <div class="categories animated wow slideInUp" data-wow-delay=".5s">
+                <h3>抓紧时间淘重点</h3>
+                <div class="cate">                   
+                    <img src="~/images/SCX.jpg" width="347" height="410"/>
+                 </div>               
+            </div>
+            <div class="men-position animated wow slideInUp" data-wow-delay=".5s">
+                <a href="single.html"><img src="/images/29.jpg" alt="" class="img-responsive" /></a>
+                <div class="men-position-pos">
+                    <h4>又是一年考研季</h4>
+                    <h5><span>50%</span>资料大折扣</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 single-right">
+            <div class="col-md-5 single-right-left animated wow slideInUp" data-wow-delay=".5s">
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li data-thumb="/@Model.GetGoodsByID.GoodsPhoto" >
+                            <div class="thumb-image"> <img src="/@Model.GetGoodsByID.GoodsPhoto" data-imagezoom="true" class="img-responsive" > </div>
+                        </li>
+                        <li data-thumb="/@Model.GetGoodsByID.GoodsPhoto1">
+                            <div class="thumb-image"> <img src="/@Model.GetGoodsByID.GoodsPhoto1" data-imagezoom="true" class="img-responsive"> </div>
+                        </li>
+                        <li data-thumb="/@Model.GetGoodsByID.GoodsPhoto2">
+                            <div class="thumb-image"> <img src="/@Model.GetGoodsByID.GoodsPhoto2" data-imagezoom="true" class="img-responsive"> </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 商品图片放大查看样式和JS -->            
+                <script src="~/assets/js/Sc/jquery.flexslider.js"></script>             
+                <link href="~/assets/css/flexslider.css" rel="stylesheet" />
+                <script>
+						// Can also be used with $(document).ready()
+						$(window).load(function() {
+						  $('.flexslider').flexslider({
+							animation: "slide",
+							controlNav: "thumbnails"
+						  });
+						});
+                </script>
+                <!-- 商品图片放大查看样式和JS -->
+            </div>
+            <div class="col-md-7 single-right-left simpleCart_shelfItem animated wow slideInRight" data-wow-delay=".5s">
+                <h3>@Model.GetGoodsByID.GoodsName</h3>
+                <h4><span class="item_price">$@Model.GetGoodsByID.Price</span> - $@Model.GetGoodsByID.SubPrice</h4>
+                <div class="rating1">
+                    <span class="starRating">
+                        <input id="rating5" type="radio" name="rating" value="5">
+                        <label for="rating5">5</label>
+                        <input id="rating4" type="radio" name="rating" value="4">
+                        <label for="rating4">4</label>
+                        <input id="rating3" type="radio" name="rating" value="3" checked>
+                        <label for="rating3">3</label>
+                        <input id="rating2" type="radio" name="rating" value="2">
+                        <label for="rating2">2</label>
+                        <input id="rating1" type="radio" name="rating" value="1">
+                        <label for="rating1">1</label>
+                    </span>
+                </div>
+                <div class="description">
+                    <h5><i>商品简介</i></h5>
+                    <p>
+                       @Model.GetGoodsByID.GoodsIntroduce
+                    </p>
+                </div>
+                <div class="color-quality">
+                    <div class="color-quality-left">
+                        <h5>颜色 : </h5>
+                        <ul>
+                            <li><a href="#"><span></span>红</a></li>
+                            <li><a href="#" class="brown"><span></span>黄</a></li>
+                            <li><a href="#" class="purple"><span></span>紫</a></li>
+                            <li><a href="#" class="gray"><span></span>紫兰</a></li>
+                        </ul>
+                    </div>
+                    <div class="color-quality-right">
+                        <h5>数量 :</h5>
+                        <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
+                            <option value="null">1 Qty</option>
+                            <option value="null">2 Qty</option>
+                            <option value="null">3 Qty</option>
+                            <option value="null">4 Qty</option>
+                        </select>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="occasional">
+                    本商品最终解释权归雁升网所有                  
+                    <div class="clearfix"> </div>
+                </div>
+              
+                    @using (Html.BeginForm("AddShoppingCar", "ShangCheng", FormMethod.Post))
+                    {
+
+                        <div>
+                          
+                          
+                            </div>
+                        <div class="occasion-cart">
+                            @if (Session["UserID"] != null)
+                            {
+ 
+                               <input type="submit" style="background: transparent;border-style: none;" value="立即购买"/>
+                                <a class="item_add" href="#">  <input type="submit" style="background: transparent;border-style: none;" value="加入购物车" /></a>
+                            }
+                            else
+                            {
+                                <a class="item_add" href="#">  <input type="submit" style="background: transparent;border-style: none;" value ="加入购物车" onclick="alert(' 请先登录 ')" /></a>
+                                <input type="submit" style="background: transparent;border-style: none;" value="立即购买" />
+                            }
+
+                        </div>
+
+
+                    }
+            
+              
+
+
+
+               
+                <div class="social">                   
+                    <div class="social-right">
+                        <ul class="social-icons">
+                            <li><a href="#" class="facebook"></a></li>
+                            <li><a href="#" class="twitter"></a></li>
+                            <li><a href="#" class="g"></a></li>
+                            <li><a href="#" class="instagram"></a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <div class="clearfix"> </div>
+            <!-- 商品详细信息和评论回复 -->
+            <div class="bootstrap-tab animated wow slideInUp" data-wow-delay=".5s">
+                <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+                    <ul id="myTab" class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">商品详情</a></li>
+                        <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">评论</a></li>                    
+                    </ul>
+                    <div id="myTabContent" class="tab-content">
+                        <div role="tabpanel" class="tab-pane fade in active bootstrap-tab-text" id="home" aria-labelledby="home-tab">
+                            <h5>商品详细介绍</h5>
+                            <p>
+                                @Model.GetGoodsByID.GoodsIntroduce
+                                <span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+                            </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade bootstrap-tab-text" id="profile" aria-labelledby="profile-tab">                       
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+</div>
+<!-- //商品详情结束 -->
+<script src="~/assets/js/Sc/imagezoom.js"></script>

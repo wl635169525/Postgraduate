@@ -1,0 +1,158 @@
+﻿@model UI.Models.IndexViewModels
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/assets/css/Homeindex.css" rel="stylesheet" /><!--院校样式 -->
+<link rel='stylesheet' id='camera-css' href='/assets/css/camera.css' type='text/css' media='all'>
+<!-- Header -->
+<header id="head">
+    <div class="container">
+        <div class="heading-text">
+            <h1 class="animated flipInY delay1">Start Online Education</h1>
+            <p>Free Online education template for elearning and online education institute.</p>
+        </div>
+        <div class="fluid_container">
+               @foreach (var lunbo in Model.Carousel1)
+               {
+            <div class="camera_wrap camera_emboss pattern_1" id="camera_wrap_4">
+                <div data-thumb="/@lunbo.CarouselLuJing1" data-src="/@lunbo.C1">
+                    <h2>We develop.</h2>
+                </div>
+                <div data-thumb="/@lunbo.CarouselLuJing2" data-src="/@lunbo.C2">
+                </div>
+                <div data-thumb="/@lunbo.CarouselLuJing3" data-src="/@lunbo.C3">
+                </div>
+           
+            </div><!-- #camera_wrap_3 -->
+               }
+        </div><!-- .fluid_container -->
+    </div>
+</header>
+<!-- /Header -->
+<section class="kopa-area kopa-area-01">
+    <div class="container">
+        <div class="widget kopa-widget-features">
+            <header class="widget-header style-01"></header>
+            <div class="widget-content module-features-01">
+                <div class="row" style="margin-top: -65px">
+                    @foreach (var yuanxiao in Model.School1)
+                    {
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <article class="entry-item">
+                                <div class="custom" style="height:300px;">
+
+                                    <div class="entry-thumb">
+                                        <div class="yuan" style="border-radius: 50%; border: 3px solid #ff0000; overflow: hidden;">
+                                            <img src=/@yuanxiao.SchoolPhoto width="170" height="170" />
+                                        </div>
+                                    </div>
+                                    <div class="entry-content">
+                                        <h4 class="entry-title">
+                                            <a href="#">@yuanxiao.SchoolName</a>
+                                        </h4>
+                                        <p style="margin-bottom: 5px;">
+                                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;@yuanxiao.SIntroduce
+                                            <hr />
+                                        </p>
+                                        <a href="#" class="button-01">查看详细</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!--院校简介部分 结束-->
+<div style="height:60px;width:100%"></div>
+<section class="news-box top-margin">
+    <div class="container">
+        <h2><span>课程中心</span></h2>
+        <div class="row">
+            @foreach (var kechen in Model.Course1)
+            {
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="newsBox">
+                        <div class="thumbnail">
+                            <figure><img src="/@kechen.CoursePhoto" alt=""></figure>
+                            <div class="caption maxheight2">
+                                <div class="box_inner">
+                                    <div class="box">
+                                        <p class="title"><h5>@kechen.CourseTitle</h5></p>
+                                        <p>@kechen.CourseIntroduce</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="title-box clearfix "><h2 class="title-box_primary">考研攻略</h2></div>
+            @foreach (var gonglue in Model.Strategy1)
+            {                
+                    <p style="color:dimgray">
+                        <img src="~/assets/images/tubiao/biaotilan.png" height="25" width="25" />&nbsp;&nbsp;<span>@gonglue.StrategyName </span>
+                    </p>
+                
+            }
+            <a href="@Url.Action("Strategy","Strategy")" title="read more" class="btn-inline " target="_self">read more</a>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="title-box clearfix "><h2 class="title-box_primary">最新资讯</h2></div>
+            <div class="list styled custom-list">
+                <ul>
+                    @foreach (var zixun in Model.News1)
+                    {
+                        <li>
+                            <a title="Snatoque penatibus et magnis dis partu rient montes ascetur ridiculus mus." href="#">
+                                <img src="~/assets/images/tubiao/huo.png" height="25" width="25" />&nbsp;&nbsp;@zixun.NewsName
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 轮播图JS-->
+<script type='text/javascript' src='/assets/js/jquery.min.js'></script>
+<script type='text/javascript' src='/assets/js/fancybox/jquery.fancybox.pack.js'></script>
+<script type='text/javascript' src='/assets/js/jquery.mobile.customized.min.js'></script>
+<script type='text/javascript' src='/assets/js/jquery.easing.1.3.js'></script>
+<script type='text/javascript' src='/assets/js/camera.min.js'></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/custom.js"></script>
+<script>
+		jQuery(function(){
+
+			jQuery('#camera_wrap_4').camera({
+                transPeriod: 500,
+                time: 3000,
+				height: '600',
+				loader: 'false',
+				pagination: true,
+				thumbnails: false,
+				hover: false,
+                playPause: false,
+                navigation: false,
+				opacityOnGrid: false,
+				imagePath: 'assets/images/'
+			});
+
+		});
+
+</script>
+
+
+

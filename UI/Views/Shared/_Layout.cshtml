@@ -1,0 +1,219 @@
+﻿@using Models;
+@using BLL;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>欢迎来到雁升网</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="~/assets/css/bootstrap-theme.css" media="screen">
+    <link rel="stylesheet" href="~/assets/css/style.css">   
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <!-- Button for smallest screens -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                <a class="navbar-brand" href="#">
+                    <img src="~/assets/images/logo.png" alt="Techro HTML5 template">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right mainNav">
+                    <li class="#"><a href="@Url.Action("Index","Index")">首页</a></li>
+                    <li><a href="@Url.Action("SchoolIndex","School")">院校简介</a></li>                   
+                    <li><a href="@Url.Action("Strategy","Strategy")">攻略资讯</a></li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("Course","Course")" class="dropdown-toggle" data-toggle="dropdown">课程中心 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="@Url.Action("Course","Course")">考研英语</a></li>
+                            <li><a href="@Url.Action("Course","Course")">考研政治</a></li>
+                            <li><a href="@Url.Action("Course","Course")">考研数学</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="@Url.Action("ShangChengIndex","ShangCheng")">资料市场</a></li>
+                    <li><a href="@Url.Action("LunTanIndex","LunTan")">研友之家</a></li>
+                 
+                    <li><a href="@Url.Action("Login","UserInfo")">登录</a></li>
+                    <li>
+                        <div style="height:40px;width:150px;float:right;">
+                            @{
+                                UserInfoManager userinfoManager = new UserInfoManager();
+                                if (Session["UserName"] != null)
+                                {
+                                    UserInfo userinfo = userinfoManager.GetUsersByName(Session["UserName"].ToString());
+                                    <p style="float:right;margin-top:10px">@Session["UserName"],欢迎您</p>
+                                    if (userinfo.Photo != null)
+                                    {
+                                        <a href="@Url.Action("UserCenter","UserCenter",new {userid = userinfo.UserID})" target="_blank"><img src="@userinfo.Photo" style="width:40px;height:40px;border-radius:50%;float:left" /></a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@Url.Action("UserCenter","UserCenter",new {userid = userinfo.UserID})" target="_blank">
+                                            <img src="~/images/photo.png" style="width:40px;height:40px;border-radius:50%;float:left" />
+                                        </a>
+                                    }
+
+                                }
+                            }
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    @RenderBody()
+    <footer id="footer">
+
+        <div class="container">
+            <div class="row">
+                <div class="footerbottom">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footerwidget">
+                            <h4>
+                                友情链接
+                            </h4>
+                            <div class="menu-course">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="https://www.unjs.com/">
+                                            大学网
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://yz.chsi.com.cn/">
+                                            研招网
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.kaoyan.com/">
+                                            考研帮
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.jxnu.edu.cn/">
+                                            江西师大
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footerwidget">
+                            <h4>
+                                课程介绍
+                            </h4>
+                            <div class="menu-course">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                            各科名师
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            权威正版
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            在线教学
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            自我提高
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footerwidget">
+                            <h4>
+                                论坛介绍
+                            </h4>
+                            <div class="menu-course">
+                                <ul class="menu">
+                                    <li>
+                                        <a href="#">
+                                            线上交流
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            学习交友
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            开展讨论
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            活跃氛围
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="footerwidget">
+                            <h4>商务合作</h4>
+                            <p>欢迎有志向有想法的朋友一起合作交流</p>
+                            <div class="contact-info">
+                                <i class="fa fa-map-marker"></i> 江西省南昌市江西师范大学X3522工作室<br>
+                                <i class="fa fa-phone"></i>+00 123 156 711 <br>
+                                <i class="fa fa-envelope-o"></i> 1274066291@qq.com
+                                <i class="fa fa-phone"></i>指导老师：曽雅林 <br>
+                            </div>
+                        </div><!-- end widget -->
+                    </div>
+                </div>
+            </div>
+            <div class="social text-center">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-dribbble"></i></a>
+                <a href="#"><i class="fa fa-flickr"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+
+            <div class="clear"></div>
+            <!--CLEAR FLOATS-->
+        </div>
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 panel">
+                        <div class="panel-body">
+                            <p class="simplenav">
+                                <a href="@Url.Action("Index","Index")">首页</a> |
+                                <a href="@Url.Action("SchoolIndex","School")">院校简介</a> |
+                                <a href="@Url.Action("Strategy","Strategy")">攻略资讯</a> |
+                                <a href="@Url.Action("Course","Course")">课程中心</a> |
+                                <a href="videos.html">资料市场</a> |
+                                <a href="contact.html">研友之家</a>
+                                <a href="contact.html">个人中心</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row of panels -->
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

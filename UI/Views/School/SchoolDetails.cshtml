@@ -1,0 +1,55 @@
+﻿@model UI.Models.SchoolViewModels
+@{
+    ViewBag.Title = "SchoolDetails";
+    Layout = "~/Views/Shared/_School.cshtml";
+}
+<link href="~/assets/css/SchoolDetails.css" rel="stylesheet" />
+<div class="schoolname">
+    <div class="name">@Model.GetSchoolByID.SchoolName</div>
+</div>
+<div class="jianjie-news">
+    <div class="kongge1"></div>
+    <div class="jianjie">
+         <div class="jieshao">
+             <div class="title1">院校简介:</div>
+             <div class="content1">
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                 @Model.GetSchoolByID.SIntroduce
+             </div>
+         </div>
+       <div class="kongge1"></div>
+        <div class="jieshao">
+            <div class="title1" >考研信息:</div>
+            <div class="content1">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+               @Model.GetSchoolByID.KYmessage
+            </div>
+        </div>             
+    </div>
+    <div class="image1">
+        <div class="kongge1"></div>
+        <img src="~/@Model.GetSchoolByID.SchoolPhoto"  width="500" height="350"/>
+    </div>
+    <div class="kongge2"></div>
+    <div class="zhuanyexinxi">     
+        <div class="title1">专业信息:</div>
+        <div class="content1">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            @Model.GetSchoolByID.ZYmessage
+        </div>
+    </div>
+    <div class="zhuanyexinxi">
+        <div class="kongge2"></div>
+        <div class="title1">著名导师:</div>
+        <div class="content1">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            @Model.GetSchoolByID.ZMTeacher
+        </div>
+        <div class="kongge3"></div>
+    </div>
+</div>
+<div class="teacher"></div>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="~/assets/js/script.js"></script>
+
+
